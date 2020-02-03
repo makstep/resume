@@ -1,7 +1,8 @@
 // @flow
-import React from 'react'
-import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
+import React from 'react';
+
+// Componets
+import Internalization from '../../Internalization';
 import {
   H3,
   H3SubHeader,
@@ -17,8 +18,12 @@ import {
   List,
   ListItem,
   ListHeader
-} from '../../UIKit'
+} from '../../UIKit';
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants';
+
+// Types
 type Props = {
   companyName: string,
   description: string,
@@ -31,7 +36,7 @@ type Props = {
   position: string,
   tasks: Array<string>,
   achievements: Array<string>
-}
+};
 
 function Shared({
   companyName,
@@ -149,7 +154,7 @@ function Shared({
         </TableRow>
       </Table>
     </Experience>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -179,7 +184,7 @@ const ruProps: Props = {
   processField: 'Процесс разработки',
   position: 'FullStack разработчик',
   adNetworksField: 'Рекламные сети'
-}
+};
 
 const enProps: Props = {
   description:
@@ -208,7 +213,7 @@ const enProps: Props = {
   processField: 'Dev Process',
   position: 'FullStack developer',
   adNetworksField: 'Ad Networks'
-}
+};
 
 export default function OneRetarget(_props: any) {
   return (
@@ -218,5 +223,5 @@ export default function OneRetarget(_props: any) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

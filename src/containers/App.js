@@ -1,10 +1,20 @@
 // @flow
-import React, { Component } from 'react'
-import { BrowserRouter, Route, Redirect } from 'react-router-dom'
-import LocaleContext from '../contexts/Locale'
-import * as routes from '../routes'
-import Resume from '../components/Resume'
-import { RU_LOCALE, EN_LOCALE } from '../constants'
+import React, { Component } from 'react';
+
+// Libs
+import { BrowserRouter, Route, Redirect } from 'react-router-dom';
+
+// Components
+import Resume from '../components/Resume';
+
+// Routes
+import * as routes from '../routes';
+
+// Context
+import LocaleContext from '../contexts/Locale';
+
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../constants';
 
 class App extends Component<any, any> {
   routeWithLocale(route: string, locale: string) {
@@ -18,7 +28,7 @@ class App extends Component<any, any> {
           </LocaleContext.Provider>
         )}
       />
-    )
+    );
   }
 
   render() {
@@ -37,8 +47,8 @@ class App extends Component<any, any> {
           </div>
         </BrowserRouter>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

@@ -1,8 +1,12 @@
 // @flow
-import React from 'react'
-import styled from 'styled-components'
-import * as routes from '../../routes'
-import { NavLink } from 'react-router-dom'
+import React from 'react';
+
+// Libs
+import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
+
+// Routes
+import * as routes from '../../routes';
 
 const Wrapper = styled.div`
   display: flex;
@@ -15,7 +19,7 @@ const Wrapper = styled.div`
   @media print {
     display: none;
   }
-`
+`;
 
 const LanguageLink = styled(NavLink)`
   font-style: normal;
@@ -26,23 +30,27 @@ const LanguageLink = styled(NavLink)`
 
   color: ${({ isSelected }) => (isSelected ? '#000000' : '#E2E2E2')};
   cursor: ${({ isSelected }) => (isSelected ? 'default' : 'pointer')};
-`
+`;
 
 export default function(_props: any) {
   return (
     <Wrapper>
       <LanguageLink
         to={routes.ru}
-        isSelected={window.location.pathname === routes.routeWithBaseURL(routes.ru)}
+        isSelected={
+          window.location.pathname === routes.routeWithBaseURL(routes.ru)
+        }
       >
         RU
       </LanguageLink>
       <LanguageLink
         to={routes.en}
-        isSelected={window.location.pathname === routes.routeWithBaseURL(routes.en)}
+        isSelected={
+          window.location.pathname === routes.routeWithBaseURL(routes.en)
+        }
       >
         EN
       </LanguageLink>
     </Wrapper>
-  )
+  );
 }

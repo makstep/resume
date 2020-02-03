@@ -1,13 +1,18 @@
-import React, { Fragment } from 'react'
+// @flow
 
-import Person from './Person'
-import Experience from './Experience'
-import Common from './Common'
+import React, { Fragment } from 'react';
 
-export default function FullStory(_props) {
-  return <Fragment>
-    <Person />
-    <Experience />
-    <Common />
-  </Fragment>
+// Components
+import Person from './Person';
+import Experience from './Experience';
+import Common from './Common';
+
+export default function FullStory(_props: any) {
+  return (
+    <Fragment>
+      <Person />
+      <Experience />
+      <Common />
+    </Fragment>
+  );
 }

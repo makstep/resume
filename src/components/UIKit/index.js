@@ -1,16 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
-import { textColor, grayTextColor } from './shared'
+// @flow
 
+import React from 'react';
+
+// Libs
+import styled from 'styled-components';
+
+// Constants
+import { textColor, grayTextColor } from './shared';
 import {
   TEXT_MAX_WIDTH,
   MAX_CONTAINER_WIDTH,
   MOBILE_MEDIA_QUERY_WIDTH,
   IPAD_MEDIA_QUERY_WIDTH
-} from '../../constants'
+} from '../../constants';
 
-export const LanguageSwitcher = require('./LanguageSwitcher').default
-export const ExperienceDates = require('./ExperienceDates').default
+export const LanguageSwitcher = require('./LanguageSwitcher').default;
+export const ExperienceDates = require('./ExperienceDates').default;
 
 export const Wrapper = styled.div`
   max-width: ${MAX_CONTAINER_WIDTH}px;
@@ -23,7 +28,7 @@ export const Wrapper = styled.div`
   @media (max-width: ${MOBILE_MEDIA_QUERY_WIDTH}px) {
     padding: 70px 16px 30px 16px;
   }
-`
+`;
 
 export const H1 = styled.h1`
   font-style: normal;
@@ -31,7 +36,7 @@ export const H1 = styled.h1`
   font-size: 44px;
   line-height: 1;
   color: ${textColor};
-`
+`;
 
 export const H2 = styled.h2`
   margin-top: 15px;
@@ -42,13 +47,13 @@ export const H2 = styled.h2`
   font-size: 38px;
   line-height: 1;
   color: ${textColor};
-`
+`;
 
 export const H2SubHeader = styled.span`
   font-size: 18px;
   font-weight: 400;
   color: ${grayTextColor};
-`
+`;
 
 export const H3 = styled.h3`
   font-style: normal;
@@ -56,13 +61,13 @@ export const H3 = styled.h3`
   font-size: 28px;
   line-height: 30px;
   color: ${textColor};
-`
+`;
 
 export const H3SubHeader = styled.span`
   font-size: 14px;
   font-weight: 400;
   color: ${grayTextColor};
-`
+`;
 
 export const P = styled.p`
   margin-bottom: 10px;
@@ -71,11 +76,11 @@ export const P = styled.p`
   line-height: 1.2;
   letter-spacing: 0.2px;
   color: ${textColor};
-`
+`;
 
 export const AboutSection = styled.div`
   margin-top: 35px;
-`
+`;
 
 export const FaceImage = styled.div`
   margin-top: 20px;
@@ -94,14 +99,14 @@ export const FaceImage = styled.div`
       color-adjust: exact !important;
     }
   }
-`
+`;
 
 export const Contacts = styled.div`
   margin-top: 26px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-`
+`;
 
 export const ContactColumn = styled.div`
   flex-grow: 0;
@@ -117,7 +122,7 @@ export const ContactColumn = styled.div`
     flex-basis: 100%;
     margin-bottom: 15px;
   }
-`
+`;
 
 export const ContactName = styled.div`
   font-style: normal;
@@ -125,7 +130,7 @@ export const ContactName = styled.div`
   font-size: 16px;
   line-height: 16px;
   color: ${textColor};
-`
+`;
 
 export const ContactValue = styled.a`
   display: inline-block;
@@ -136,7 +141,7 @@ export const ContactValue = styled.a`
   line-height: 16px;
   text-decoration: none;
   color: ${textColor};
-`
+`;
 
 export const AboutText = styled.div`
   max-width: ${TEXT_MAX_WIDTH}px;
@@ -148,15 +153,15 @@ export const AboutText = styled.div`
   text-align: justify;
   letter-spacing: 0.01em;
   color: ${textColor};
-`
+`;
 
 export const ExperienceSection = styled.div`
   margin-top: 65px;
-`
+`;
 
 export const Experience = styled.div`
   margin-top: 46px;
-`
+`;
 
 export const ExperienceDescription = styled.div`
   max-width: ${TEXT_MAX_WIDTH}px;
@@ -168,22 +173,22 @@ export const ExperienceDescription = styled.div`
   line-height: 1.3;
   letter-spacing: 0.2px;
   color: ${textColor};
-`
+`;
 
 export const Bold = styled.span`
   font-weight: bold;
   color: ${textColor};
-`
+`;
 
 export const Link = styled.a`
   color: ${textColor};
-`
+`;
 
 // Table start
 
 export const Table = styled.div`
   margin-top: 30px;
-`
+`;
 
 export const TableRow = styled.div`
   margin-bottom: 10px;
@@ -193,7 +198,7 @@ export const TableRow = styled.div`
   @media (max-width: ${MOBILE_MEDIA_QUERY_WIDTH}px) {
     flex-direction: column;
   }
-`
+`;
 
 export const TableRowName = styled.div`
   flex-grow: 0;
@@ -210,7 +215,7 @@ export const TableRowName = styled.div`
     flex-basis: auto;
     font-weight: bold;
   }
-`
+`;
 
 export const TableRowValue = styled.div`
   flex-grow: 1;
@@ -219,47 +224,47 @@ export const TableRowValue = styled.div`
   font-size: 14px;
   line-height: 20px;
   color: ${textColor};
-`
+`;
 
-const TableRowValueList = styled.div``
+const TableRowValueList = styled.div``;
 
 const TableRawValueListItem = styled.div`
   display: inline-block;
   margin-right: 12px;
   color: ${textColor};
-`
+`;
 
-export function TableRowValueAsList({ value }) {
+export function TableRowValueAsList({ value }: any) {
   return (
     <TableRowValueList>
       {value.map((text, index) => (
         <TableRawValueListItem key={index}>{text}</TableRawValueListItem>
       ))}
     </TableRowValueList>
-  )
+  );
 }
 
 export const TableRowValueLink = styled.a`
   color: ${textColor};
-`
+`;
 
 // Table end
 
 export const CommonSection = styled.div`
   margin-top: 100px;
-`
+`;
 
 export const ListHeader = styled.div`
   font-weight: bold;
   font-size: 17px;
   margin-bottom: 6px;
   color: ${textColor};
-`
+`;
 
 export const List = styled.ol`
   list-style-type: none;
   list-style-position: inside;
-`
+`;
 
 export const ListItem = styled.li`
   text-indent: 4px;
@@ -270,4 +275,4 @@ export const ListItem = styled.li`
   &:before {
     content: '- ';
   }
-`
+`;

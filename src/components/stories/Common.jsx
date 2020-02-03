@@ -1,15 +1,19 @@
 // @flow
-import React from 'react'
-import Internalization from '../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../constants'
-import { H2, CommonSection } from '../UIKit'
+import React from 'react';
 
-import Education from './Common/Education'
-import Languages from './Common/Languages'
+// Components
+import Internalization from '../Internalization';
+import { RU_LOCALE, EN_LOCALE } from '../../constants';
+import { H2, CommonSection } from '../UIKit';
 
+// Common Components
+import Education from './Common/Education';
+import Languages from './Common/Languages';
+
+// Types
 type SharedProps = {
   header: string
-}
+};
 
 function Shared({ header }: SharedProps) {
   return (
@@ -19,16 +23,16 @@ function Shared({ header }: SharedProps) {
       <Education />
       <Languages />
     </CommonSection>
-  )
+  );
 }
 
 const ruProps = {
   header: 'Общее'
-}
+};
 
 const enProps = {
   header: 'Common'
-}
+};
 
 export default function() {
   return (
@@ -38,5 +42,5 @@ export default function() {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

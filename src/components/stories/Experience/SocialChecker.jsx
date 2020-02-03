@@ -1,7 +1,8 @@
 // @flow
-import React from 'react'
-import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
+import React from 'react';
+
+// Components
+import Internalization from '../../Internalization';
 import {
   H3,
   H3SubHeader,
@@ -16,8 +17,12 @@ import {
   ListHeader,
   List,
   ListItem
-} from '../../UIKit'
+} from '../../UIKit';
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants';
+
+// Types
 type Props = {
   header: string,
   description: string,
@@ -26,7 +31,7 @@ type Props = {
   achievementsField: string,
   freelance: string,
   achievements: Array<string>
-}
+};
 
 function Shared({
   header,
@@ -73,7 +78,7 @@ function Shared({
         </TableRow>
       </Table>
     </Experience>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -91,7 +96,7 @@ const ruProps: Props = {
     'Реализована возможность посчитать просмотр на YouTube',
     'Запланированная проверка наличия лайка и репоста после выполнения задачи'
   ]
-}
+};
 
 const enProps: Props = {
   header: 'SocialChecker Service',
@@ -108,7 +113,7 @@ const enProps: Props = {
     `Implemented the ability to count the YouTube's video view`,
     'Background task scheduler to check task done after some time'
   ]
-}
+};
 
 export default function Teleport(_props: any) {
   return (
@@ -118,5 +123,5 @@ export default function Teleport(_props: any) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

@@ -1,8 +1,8 @@
 // @flow
-import React, { Fragment } from 'react'
-import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
-import type { Node } from 'react'
+import React, { Fragment } from 'react';
+
+// Components
+import Internalization from '../../Internalization';
 import {
   H3,
   H3SubHeader,
@@ -16,7 +16,13 @@ import {
   TableRowName,
   TableRowValue,
   TableRowValueAsList
-} from '../../UIKit'
+} from '../../UIKit';
+
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants';
+
+// Types
+import type { Node } from 'react';
 
 type Props = {
   description: string,
@@ -29,7 +35,7 @@ type Props = {
   position: string,
   technologiesField: string,
   llc: string
-}
+};
 
 function Shared({
   description,
@@ -81,7 +87,7 @@ function Shared({
         </TableRow>
       </Table>
     </Experience>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -136,7 +142,7 @@ const ruProps: Props = {
   position: 'FullStack разработчик',
   technologiesField: 'Технологии',
   llc: 'ООО'
-}
+};
 
 const enProps: Props = {
   description: 'Outsource development. Remote Job.',
@@ -189,7 +195,7 @@ const enProps: Props = {
   position: 'FullStack developer',
   technologiesField: 'Technologies',
   llc: 'LLC'
-}
+};
 
 export default function TopUnits(_props: any) {
   return (
@@ -199,5 +205,5 @@ export default function TopUnits(_props: any) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

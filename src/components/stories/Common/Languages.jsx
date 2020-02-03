@@ -1,7 +1,8 @@
 // @flow
-import React from 'react'
-import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
+import React from 'react';
+
+// Components
+import Internalization from '../../Internalization';
 import {
   H3,
   Experience,
@@ -9,15 +10,19 @@ import {
   TableRow,
   TableRowName,
   TableRowValue
-} from '../../UIKit'
+} from '../../UIKit';
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants';
+
+// Types
 type Props = {
   header: string,
   russianField: string,
   russianValue: string,
   englishField: string,
   englishValue: string
-}
+};
 
 function Shared({
   header,
@@ -41,7 +46,7 @@ function Shared({
         </TableRow>
       </Table>
     </Experience>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -50,7 +55,7 @@ const ruProps: Props = {
   russianValue: 'Родной',
   englishField: 'Английский',
   englishValue: 'Intermediate'
-}
+};
 
 const enProps: Props = {
   header: 'Языки',
@@ -58,7 +63,7 @@ const enProps: Props = {
   russianValue: 'Native',
   englishField: 'English',
   englishValue: 'Intermediate'
-}
+};
 
 export default function Languaged(_props: any) {
   return (
@@ -68,5 +73,5 @@ export default function Languaged(_props: any) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

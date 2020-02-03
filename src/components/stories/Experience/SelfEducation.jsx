@@ -1,7 +1,8 @@
 // @flow
 import React from 'react'
+
+// Components
 import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
 import {
   H3,
   Experience,
@@ -9,6 +10,10 @@ import {
   ExperienceDescription
 } from '../../UIKit'
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants'
+
+// Types
 type Props = {
   header: string,
   description: string
@@ -18,7 +23,7 @@ function Shared({ header, description }: Props) {
   return (
     <Experience>
       <H3>{header}</H3>
-      <ExperienceDates from={'2018-11-01'} to={ExperienceDates.NOW} />
+      <ExperienceDates from={'2018-11-01'} to={'2019-08-01'} />
 
       <ExperienceDescription>{description}</ExperienceDescription>
     </Experience>

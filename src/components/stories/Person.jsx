@@ -1,7 +1,7 @@
 // @flow
-import React from 'react'
-import { RU_LOCALE, EN_LOCALE } from '../../constants'
-import contacts from '../../contacts'
+import React from 'react';
+
+// Components
 import {
   AboutSection,
   H1,
@@ -11,15 +11,22 @@ import {
   ContactName,
   ContactValue,
   AboutText
-} from '../UIKit'
-import Internalization from '../Internalization'
-import feceImage from '../../images/portaint.jpg'
+} from '../UIKit';
+import Internalization from '../Internalization';
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../constants';
+import contacts from '../../contacts';
+
+// Images
+import feceImage from '../../images/portaint.jpg';
+
+// Types
 type Props = {
   name: string,
   about: string,
   phoneField: string
-}
+};
 
 function Shared({ name, about, phoneField }: Props) {
   return (
@@ -66,7 +73,7 @@ function Shared({ name, about, phoneField }: Props) {
 
       <AboutText>{about}</AboutText>
     </AboutSection>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -77,7 +84,7 @@ const ruProps: Props = {
   Постоянно изучаю новые и трендовые технологии. 
   Есть опыт удалённой работы с командой в разный часовых поясах.`,
   phoneField: 'Телефон'
-}
+};
 
 const enProps: Props = {
   name: 'Maksim Ivanov',
@@ -87,7 +94,7 @@ const enProps: Props = {
   I always learn new and trend technologies.
   I have remote team work experience.`,
   phoneField: 'Phone'
-}
+};
 
 export default function Person(_props: Object) {
   return (
@@ -97,5 +104,5 @@ export default function Person(_props: Object) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }

@@ -1,7 +1,8 @@
 // @flow
-import React from 'react'
-import Internalization from '../../Internalization'
-import { RU_LOCALE, EN_LOCALE } from '../../../constants'
+import React from 'react';
+
+// Components
+import Internalization from '../../Internalization';
 import {
   H3,
   Experience,
@@ -17,8 +18,12 @@ import {
   ListHeader,
   TableRowValueLink,
   H3SubHeader
-} from '../../UIKit'
+} from '../../UIKit';
 
+// Constants
+import { RU_LOCALE, EN_LOCALE } from '../../../constants';
+
+// Types
 type Props = {
   header: string,
   freelance: string,
@@ -30,7 +35,7 @@ type Props = {
   linkField: string,
   tasks: Array<string>,
   achievements: Array<string>
-}
+};
 
 function Shared({
   header,
@@ -46,7 +51,9 @@ function Shared({
 }: Props) {
   return (
     <Experience>
-      <H3>{header} <H3SubHeader>{freelance}</H3SubHeader></H3>
+      <H3>
+        {header} <H3SubHeader>{freelance}</H3SubHeader>
+      </H3>
 
       <ExperienceDates from={'2016-09-01'} to={'2017-01-01'} />
 
@@ -97,7 +104,7 @@ function Shared({
         </TableRow>
       </Table>
     </Experience>
-  )
+  );
 }
 
 const ruProps: Props = {
@@ -121,7 +128,7 @@ const ruProps: Props = {
     `Бизнес процессы связанные с заказом: получение заказа, процесс сбора продуктов, 
     постройка маршрута до клиента, фотографирование заказа у клиента.`
   ]
-}
+};
 
 const enProps: Props = {
   header: 'Teleport Mobile Application',
@@ -144,7 +151,7 @@ const enProps: Props = {
     `Business processes related to ordering: taking an order, products' collection process, 
     building a route to the client, photographing the order at the client.`
   ]
-}
+};
 
 export default function Teleport(_props: any) {
   return (
@@ -154,5 +161,5 @@ export default function Teleport(_props: any) {
         [EN_LOCALE]: () => <Shared {...enProps} />
       }}
     />
-  )
+  );
 }
