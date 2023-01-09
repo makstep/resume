@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "luxon": "^1.16.0",
+    "luxon": "^2.5.2",
     "react": "^16.8.1",
     "react-document-title": "^2.0.3",
     "react-dom": "^16.8.1",
